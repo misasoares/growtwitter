@@ -13,6 +13,8 @@ public addTweet(idTweet: string, idUsuario:string, conteudo: string) {
     }
     const newTweet = new TweetBase(idTweet, conteudo);
     usuario?.tweet.push(newTweet);
+
+    console.log(usuario)
     
   }
 
@@ -25,20 +27,21 @@ public addTweet(idTweet: string, idUsuario:string, conteudo: string) {
     );
     if (index !== -1) {
       usuario?.tweet.splice(index, 1);
+      console.log("Tweet removido com sucesso.")
     } else {
       console.log(`Tweet não encontrado.`);
     }
   }
-  public pegarTweetBase(idTweet:string,idUsuario:string) {
-    const usuario = usuarios.find(
-      (item) => item.detalheUsuario().id === idUsuario
-    );
-    const tweet = usuario?.tweet.find(
-      (item) => item.pegarId() === idTweet
-    );
-    console.log(tweet);
+  // public pegarTweetBase(idTweet:string,idUsuario:string) {
+  //   const usuario = usuarios.find(
+  //     (item) => item.detalheUsuario().id === idUsuario
+  //   );
+  //   const tweet = usuario?.tweet.find(
+  //     (item) => item.pegarId() === idTweet
+  //   );
     
-  }
+    
+  // }
 }
 
 export default new TweetController();

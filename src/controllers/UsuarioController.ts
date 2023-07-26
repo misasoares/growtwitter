@@ -22,5 +22,18 @@ class UsuarioController {
       return undefined;
     }
   }
+  public removerUsuario(idUsuario: string, email: string, senha: string):void {
+  
+      const indexUsuario = usuarios.findIndex(
+        (item) => item.detalheUsuario().id === idUsuario);
+      
+      if (indexUsuario !== -1) {
+        usuarios.splice(indexUsuario, 1)
+        
+        console.log(`Usuário excluido com sucesso`)
+      }else {
+      console.log(`Usuário não encontrado.`);
+    }
+  }
 }
 export default new UsuarioController();
