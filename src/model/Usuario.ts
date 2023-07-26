@@ -3,6 +3,7 @@ import usuarios from "../data/usuario";
 import Replie from "./Replie";
 import { TweetBase } from "./TweetBase";
 import replies from "../data/replie";
+import Follower from "./Follower";
 
 
 
@@ -14,7 +15,7 @@ class Usuario {
   private senha: string;
   public tweet: TweetBase[];
   public replie:Replie[];
-  
+  public follow: Usuario[]
 
   constructor(
     id: string,
@@ -31,7 +32,7 @@ class Usuario {
     this.senha = senha;
     this.tweet = [];
     this.replie =[];
-    
+    this.follow = []
   }
 
 

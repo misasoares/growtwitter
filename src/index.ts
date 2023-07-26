@@ -7,6 +7,7 @@ import usuarios from "./data/usuario";
 import Replie from "./model/Replie";
 import Usuario from "./model/Usuario";
 import { TweetBase } from "./model/TweetBase";
+import Follower from "./model/Follower";
 
 
 const usuario1  =  new Usuario(
@@ -39,6 +40,7 @@ const usuario1  =  new Usuario(
 
   ReplieController.removeReplie("1234","3")
   
-  UsuarioController.removerUsuario("5678","jose@growdev.com","20202")
-  
 
+const follower = new Follower
+follower.follow("1234","4321")// meu id depois o id de quem eu quero seguir.
+follower.follow("1234","5678")
