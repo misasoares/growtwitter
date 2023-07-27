@@ -12,12 +12,11 @@ class Follow{
             user!.follow.push(followUser)
             
             console.log(`${followUser.detalheUsuario().nome}, você segue ${user?.follow.length} pessoas.` )
-            console.log(user?.follow )
+            console.log(user?.follow)
             
         }else{
             console.log(`Usuario n encontrado`)
         }
-    
     }
 }
 

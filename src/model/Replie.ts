@@ -1,4 +1,5 @@
 import usuarios from "../data/usuario";
+import Like from "./Like";
 import { TweetBase } from "./TweetBase";
 import Usuario from "./Usuario";
 
@@ -8,6 +9,7 @@ class Replie {
   public conteudo: string;
   public tweet:string;
   public autorTweet:string;
+  public like : Like[]
   
   
   
@@ -17,6 +19,7 @@ class Replie {
     this.conteudo = conteudo;
     this.tweet = tweet;
     this. autorTweet = autorTweet;
+    this.like = []
   }
   public detalheReplie(){
     return{
