@@ -5,7 +5,7 @@ import Usuario from "./Usuario";
 
 class Replie {
   protected id: string;
-  protected idUsuario:string;
+  public autor:string;
   public conteudo: string;
   public tweet:string;
   public autorTweet:string;
@@ -15,16 +15,16 @@ class Replie {
   
   constructor(id: string, idUsuario:string,conteudo: string, tweet:any, autorTweet:any) {
     this.id = id;
-    this.idUsuario = idUsuario;
+    this.autor = idUsuario;
     this.conteudo = conteudo;
     this.tweet = tweet;
-    this. autorTweet = autorTweet;
+    this.autorTweet = autorTweet;
     this.like = []
   }
   public detalheReplie(){
     return{
      id:this.id,
-     idUsuario:this.idUsuario,
+     idUsuario:this.autor,
 
     }
   }

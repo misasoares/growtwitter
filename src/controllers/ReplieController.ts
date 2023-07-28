@@ -11,30 +11,30 @@ class ReplieController {
     idAutor: string,
     conteudo: string,
     idTweet: string,
-    idUsuario: string
+    idUsuarioTweet: string
   ) {
     const autor = usuarios.find((item) => item.detalheUsuario().id === idAutor);
     if (!autor) {
       return "Usuario não encontrado";
     }
     const autorTweet = usuarios.find(
-      (item) => item.detalheUsuario().id === idUsuario
+      (item) => item.detalheUsuario().id === idUsuarioTweet
     );
 
     const findTweet = autorTweet?.tweet.find(
       (item) => item.pegarId() === idTweet
     );
-
+    
     const newReplie = new Replie(
       id,
-      idUsuario,
+      autor.detalheUsuario().username,
       conteudo,
       findTweet?.conteudo,
       autorTweet?.detalheUsuario().nome
     );
 
     autor?.replie.push(newReplie);
-    console.log(autor)
+    findTweet?.replie.push(newReplie)
   }
 
   public removeReplie(idUsuario: string, idReplie: string): void {

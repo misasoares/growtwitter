@@ -3,7 +3,7 @@ import usuarios from "../data/usuario";
 import Replie from "./Replie";
 import { TweetBase } from "./TweetBase";
 import replies from "../data/replie";
-import Follower from "./Follower";
+import Follower from "../controllers/FollowController";
 
 
 

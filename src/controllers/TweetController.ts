@@ -1,3 +1,4 @@
+import replies from "../data/replie";
 import usuarios from "../data/usuario";
 import {  TweetBase } from "../model/TweetBase";
 
@@ -13,9 +14,6 @@ public addTweet(idTweet: string, idUsuario:string, conteudo: string) {
     }
     const newTweet = new TweetBase(idTweet, conteudo);
     usuario?.tweet.push(newTweet);
-
-    console.log(usuario)
-    
   }
 
   public removerTweet(idUsuario: string, idTweet: string): void {
@@ -32,16 +30,24 @@ public addTweet(idTweet: string, idUsuario:string, conteudo: string) {
       console.log(`Tweet não encontrado.`);
     }
   }
-  // public pegarTweetBase(idTweet:string,idUsuario:string) {
-  //   const usuario = usuarios.find(
-  //     (item) => item.detalheUsuario().id === idUsuario
-  //   );
-  //   const tweet = usuario?.tweet.find(
-  //     (item) => item.pegarId() === idTweet
-  //   );
-    
-    
-  // }
+
+  public mostrarTweet(idUsuario:string, idTweet:string){
+    const findUsuario = usuarios.find((item)=>item.detalheUsuario().id === idUsuario)
+    const findTweet = findUsuario?.tweet.find((item)=>item.pegarId() === idTweet)
+
+    console.log(`@${findUsuario?.detalheUsuario().username}: ${findTweet?.conteudo}`)
+    console.log(`[${findTweet!.like.length} likes]`)
+
+
+    const arrayReplie = findTweet!.replie
+
+
+    if(findTweet?.replie.length !== 0){
+      arrayReplie.forEach(item =>{
+        console.log(`>@${item.autor}: ${item.conteudo}`)
+      })
+    }
+  }
 }
 
 export default new TweetController();

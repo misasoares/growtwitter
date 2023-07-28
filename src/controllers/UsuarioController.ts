@@ -16,7 +16,7 @@ class UsuarioController {
     if (validacao) {
       const novoUsuario = new Usuario(id, nome, email, username, senha);
       usuarios.push(novoUsuario);
-      return novoUsuario;
+      // return novoUsuario;
     } else {
       console.log("Dados Inválidos");
       return undefined;
