@@ -11,9 +11,9 @@ class TweetBase {
 
   constructor(id: string, conteudo: string) {
     this.id = id;
-     this.conteudo = conteudo;
-     this.like =[];
-     this.replie = []
+    this.conteudo = conteudo;
+    this.like =[];
+    this.replie = []
   }
 
   

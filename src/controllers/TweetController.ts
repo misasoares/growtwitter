@@ -37,7 +37,7 @@ public addTweet(idTweet: string, idUsuario:string, conteudo: string) {
 
     console.log(`@${findUsuario?.detalheUsuario().username}: ${findTweet?.conteudo}`)
     console.log(`[${findTweet!.like.length} likes]`)
-
+    
 
     const arrayReplie = findTweet!.replie
 
@@ -45,7 +45,11 @@ public addTweet(idTweet: string, idUsuario:string, conteudo: string) {
     if(findTweet?.replie.length !== 0){
       arrayReplie.forEach(item =>{
         console.log(`>@${item.autor}: ${item.conteudo}`)
+        
       })
+      console.log("--------------------------------")
+    }else{
+      console.log("--------------------------------")
     }
   }
 }

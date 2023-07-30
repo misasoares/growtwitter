@@ -22,13 +22,21 @@ import FeedController from "./controllers/FeedController";
   usuarios.push(usuario3);
 
   TweetController.addTweet("11","1234","Esse é meu primeiro tweet dentro desta plataforma")
+  TweetController.addTweet("847","1234","Esse é meu segundo tweet dentro desta plataforma")
   TweetController.addTweet("12","4321","Tweet do Misael!!")
+  TweetController.addTweet("12","5678","Tweet do Jose!!")
+  TweetController.addTweet("12","5678","Tweet do Jose2!!")
+  TweetController.addTweet("12","5678","Tweet do Jose3!!")
 
   LikeController.addLike("55","4321","11","1234")
-  LikeController.addLike("57","5678","11","1234")
+  LikeController.addLike("57","5678","847","1234")
+  LikeController.addLike("029","5678","12","5678")
+  LikeController.addLike("1435","5678","12","5678")
 
   ReplieController.addReplie("22","4321","Este também é minha primeira vez aqui.","11","1234")
   ReplieController.addReplie("89","5678","Replie do zé","11","1234")
+  ReplieController.addReplie("89","5678","Replie do zé","11","1234")
+  ReplieController.addReplie("21345","4321","Replie no Zé!!","12","5678")
 
 
 
@@ -42,6 +50,8 @@ FollowController.follow("4321","5678")//primeiro parametro: id de quem eu quero 
 
 FeedController.mostrarFeed("4321")
 
+// TweetController.mostrarTweet("1234", "11")
+//console.log(usuario2)
 
 
 //TO DO:
