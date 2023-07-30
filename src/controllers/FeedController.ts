@@ -5,7 +5,8 @@ import TweetController from "./TweetController";
 class FeedController{
     public mostrarFeed(idUsuario:string){
         const usuario = usuarios.find((item)=>item.detalheUsuario().id === idUsuario)
-
+        console.log(`Feed do ${usuario?.detalheUsuario().username}`)
+        console.log("-------------------------------------------")
         // usuario!.follow.forEach(item => {
         //     console.log(item.detalheUsuario().id)
         //     usuario!.follow.forEach(item =>{

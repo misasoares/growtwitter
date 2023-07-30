@@ -34,7 +34,6 @@ public addTweet(idTweet: string, idUsuario:string, conteudo: string) {
   public mostrarTweet(idUsuario:string, idTweet:string){
     const findUsuario = usuarios.find((item)=>item.detalheUsuario().id === idUsuario)
     const findTweet = findUsuario?.tweet.find((item)=>item.pegarId() === idTweet)
-
     console.log(`@${findUsuario?.detalheUsuario().username}: ${findTweet?.conteudo}`)
     console.log(`[${findTweet!.like.length} likes]`)
     
