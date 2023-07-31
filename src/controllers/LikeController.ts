@@ -26,6 +26,11 @@ class LikeController {
       console.log(`Tweet ou Reply não encontrado.`)
     } 
   }
+  
 }
+
+
+
+
 
 export default new LikeController();

@@ -10,7 +10,14 @@ class Like {
     this.idAutorDoLike = idAutorDoLike;
     this.id = idTweet;
     this.like = "❤"
+    
+  }
 
+  public NomeAutorLike(idAutorDoLike:string){
+    const nome = usuarios.find(item=>item.detalheUsuario().id === idAutorDoLike)
+    
+
+    return {nome:nome!.detalheUsuario().username}
   }
  
 }

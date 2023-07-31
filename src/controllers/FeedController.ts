@@ -7,31 +7,9 @@ class FeedController{
         const usuario = usuarios.find((item)=>item.detalheUsuario().id === idUsuario)
         console.log(`Feed do ${usuario?.detalheUsuario().username}`)
         console.log("-------------------------------------------")
-        // usuario!.follow.forEach(item => {
-        //     console.log(item.detalheUsuario().id)
-        //     usuario!.follow.forEach(item =>{
-        //         item.tweet.forEach(item =>{console.log(item.conteudo)})
-        //     });
-        // })
-
 
         usuario!.follow.forEach(item=>{
-            item.tweet.forEach(item2=>{ console.log(TweetController.mostrarTweet(item.detalheUsuario().id, item2.pegarId()))})
-           
-        })
-
-                // usuario!.follow.forEach(item=>{
-                //  item.tweet.forEach(item2=>{console.log(item2)})})
-
-
-        // usuario!.follow.forEach(item =>{
-        //     item.tweet.forEach(item =>{console.log(item.conteudo)})
-        // });
-
-        //console.log(usuario?.follow[0].tweet[0].conteudo )
+            item.tweet.forEach(item2=>{TweetController.mostrarTweet(item.detalheUsuario().id, item2.pegarId())})})
     }
 }
 export default new FeedController()
-//imprimir os tweets de todos que eu sigo = eu.forEach(item=>item.follow{
-//
-//})
