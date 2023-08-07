@@ -11,7 +11,6 @@ class Followcontroller{
         if(followUser !== undefined){
             user!.follow.push(followUser)
             
-            //console.log(`${followUser.detalheUsuario().nome}, você segue ${user?.follow.length} pessoas.` )
         }else{
             console.log(`Usuario n encontrado`)
         }

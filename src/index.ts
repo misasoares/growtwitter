@@ -21,6 +21,8 @@ import FeedController from "./controllers/FeedController";
   usuarios.push(usuario2);
   usuarios.push(usuario3);
 
+  //Criar tweet
+
   TweetController.addTweet("11","1234","Esse é meu primeiro tweet dentro desta plataforma")
   TweetController.addTweet("847","1234","Esse é meu segundo tweet dentro desta plataforma")
   TweetController.addTweet("12","4321","Tweet do Misael!!")
@@ -28,11 +30,16 @@ import FeedController from "./controllers/FeedController";
   TweetController.addTweet("12","5678","Tweet do Jose2!!")
   TweetController.addTweet("12","5678","Tweet do Jose3!!")
 
+
+  //Curtir tweet
   LikeController.addLike("55","4321","11","1234")
   LikeController.addLike("57","5678","847","1234")
   LikeController.addLike("029","1234","12","5678")
   LikeController.addLike("1435","1234","12","5678")
 
+ 
+
+  //Criar Replie do Tweet
   ReplieController.addReplie("22","4321","Este também é minha primeira vez aqui.","11","1234")
   ReplieController.addReplie("89","5678","Replie do zé","11","1234")
   ReplieController.addReplie("89","5678","Replie do zé","11","1234")
@@ -40,20 +47,19 @@ import FeedController from "./controllers/FeedController";
 
 
 
-
+//Seguir outros usuarios
 FollowController.follow("1234","4321")//primeiro parametro: id de quem eu quero seguir, segundo parametro: meu id
 FollowController.follow("5678","4321")//primeiro parametro: id de quem eu quero seguir, segundo parametro: meu id
 FollowController.follow("5678","1234")//primeiro parametro: id de quem eu quero seguir, segundo parametro: meu id
 FollowController.follow("4321","5678")//primeiro parametro: id de quem eu quero seguir, segundo parametro: meu id
 
 
+//Dar like em tweets ou replies
+LikeController.addLike("5555","1234","11","1234")
 
+
+//Mostra o feed de determinado usuario.
 FeedController.mostrarFeed("4321")
 
-//TweetController.mostrarTweet("5678", "12")
-//console.log(usuario2)
 
 
-//TO DO:
-//CRIAR VALIDAÇÃO PARA NÃO SEGUIR A SI PRÓPRIO
-//FEED DE TWEETS
